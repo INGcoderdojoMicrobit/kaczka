@@ -2,8 +2,18 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
     game.over(false)
 })
 function doBelka () {
-    gaplen = randint(2, 8)
-    leftlen = randint(1, 10 - (gaplen + 1))
+    gaplen += randint(-1, 1)
+    if (gaplen < 3) {
+        gaplen = 3
+    } else if (gaplen > 8) {
+        gaplen = 8
+    }
+    leftlen += randint(-1, 1)
+    if (leftlen < 1) {
+        leftlen = 1
+    } else if (leftlen + gaplen > 9) {
+        leftlen = 9 - gaplen
+    }
     rightlen = 10 - (gaplen + leftlen)
     if (leftlen == 1) {
         projecttileimg = assets.image`Lewy1`
@@ -47,16 +57,15 @@ function doBelka () {
 let projectile: Sprite = null
 let projecttileimg: Image = null
 let rightlen = 0
-let leftlen = 0
 let gaplen = 0
+let leftlen = 0
+leftlen = 1
+gaplen = 8
+rightlen = 1
 let mySprite = sprites.create(assets.image`Samolocik`, SpriteKind.Player)
 controller.moveSprite(mySprite, 100, 0)
 mySprite.bottom = scene.screenHeight()
 let predkosc = randint(5, 20)
-game.onUpdateInterval(100, function () {
-    predkosc += -1
-    if (predkosc <= 0) {
-        doBelka()
-        predkosc = randint(5, 20)
-    }
+game.onUpdateInterval(230, function () {
+    doBelka()
 })

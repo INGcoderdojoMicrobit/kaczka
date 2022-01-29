@@ -110,30 +110,11 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 `;
             case "image8":
             case "Samolocik":return img`
-.......fc.......
-......f22c......
-.....f2222c.....
-.....f222b9c....
-....f222b999c.ff
-....f222199bcfff
-....f22211b42f2f
-....f22211244c2f
-....f22291224ccf
-..fff2229b224ccf
-.fc2f22222222cf.
-fcccfc2222222f..
-f22fff4222222f..
-fffff44c22222f..
-ffff4422c222c...
-fffc4222c222c...
-.ff22222c22cc...
-..f2222cc22ccc..
-..f222fcc2244cc.
-..f22f.fcc2244cc
-..fcc..fc2f2244c
-.......f22cffffc
-.......f2c......
-.......ff.......
+3 3 3 3 3 
+3 3 3 3 3 
+3 3 3 3 3 
+3 3 3 3 3 
+3 3 3 3 3 
 `;
         }
         return null;
